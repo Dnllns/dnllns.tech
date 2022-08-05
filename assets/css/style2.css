@@ -1,0 +1,256 @@
+/* #region  ROOT VARS */
+:root {
+
+    /*
+        Css most important valus config
+    */
+
+    /* Colors */
+    --color-bg: #000000;
+    --color-acento: lawngreen;
+    --color-acento_oscuro: lime;
+    --color-resaltado: #5db903;
+    --color-acento_marcado: #54a603;
+    --color-font: white;
+
+    /* Fonts */
+    --font_custom: 'Marmelad', sans-serif;
+
+    /* Dimensions */
+    --dim-header_height: 200px;
+    --dim_lil-header_height: 180px;
+
+}
+
+/* #endregion */
+
+/* #region  HEADER */
+
+/* Contenedor de la cabecera */
+header {
+    height: var(--dim_lil-header_height);
+}
+
+/* Imagen de cabecera 'logo dnllns' */
+header img {
+
+    /*posicionaiento*/
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 30px;
+
+    /*Margin*/
+    margin-left: auto;
+    margin-right: auto;
+
+    /* dimensions */
+    width: 45%;
+    height: auto;
+
+    /*Efecto de transicion*/
+    transition: all .2s ease-in-out;
+}
+
+header img:hover {
+    transform: scale(1.2);
+}
+
+/* Canvas donde se renderiza el efecto de particulas */
+header canvas {
+    height: var(--dim_lil-header_height);
+    max-height: var(--dim_lil-header_height);
+    min-height: var(--dim_lil-header_height);
+}
+/*--------------------*/
+
+@media (min-width: 576px) {
+    
+    canvas {
+        height: var(--dim-header_height);
+        max-height: var(--dim-header_height);
+        min-height: var(--dim-header_height);
+    }
+    
+    #particles-js {
+        max-height: var(--dim-header_height);
+    }
+
+    header img {
+        /* Default size */
+        width: 260px;        
+        height: auto;
+        top: 10px;
+    }
+
+}
+
+/* #endregion */
+
+/* #region  NAV */
+
+nav {
+
+    background: linear-gradient(to right, #00ff1f, #ffc800);    
+    color: var(--color-bg) !important;
+    border-top: 2px solid var(--color-acento_marcado);
+    border-bottom: 2px solid var(--color-acento_marcado) !important;
+
+    font-family: 'Marmelad', sans-serif;
+    border-bottom: 1px solid var(--color-acento_oscuro);
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    padding-left: 15px !important;
+}
+
+#navbar-text{
+    margin-top: 5px;
+}
+
+.nav-item {
+    margin-right: 6px;
+    padding: 0px 6px 0px 6px;
+    margin-bottom: 8px;
+    background: #5db903;
+}
+
+nav button.navbar-toggler {
+    border: 2px solid;
+    background: var(--color-resaltado);
+    /* Custom background color */
+}
+
+nav a {
+    font-size: medium !important;
+    color: black !important;
+    font-weight: bold;
+    /* transition: all .1s ease-in-out; */
+}
+
+.nav-link{
+    padding: 2px;
+}
+
+nav a:hover {
+    color: whitesmoke;
+    /* transform: scale(0.9);  */
+}
+
+nav li, .navbar-brand {
+    margin-bottom: 6px;
+    margin-right: 0px !important;
+    border: 2px solid var(--color-acento_marcado);
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
+    transition: all 0.1s ease-in;
+
+}
+
+.navbar-expand-lg .navbar-nav .nav-link{
+    padding: 2px !important;
+}
+
+.navbar-brand {
+    padding: 2px !important;
+    padding-right: 7px !important;
+}
+
+/*---------------------*/
+
+@media (min-width: 576px) {
+
+    nav {
+        height: 56px;
+    }
+
+    nav li, .navbar-brand {
+        margin-bottom: 0px;
+        margin-right: 6px !important;
+    }
+    
+}
+
+/* #endregion */
+
+/* #region  BODY */
+body {
+    background-color: var(--color-bg);
+    font-family: var(--font_custom);
+    line-height: 1;
+    padding: 15px !important;
+
+}
+
+.wrapper {
+    border: 1px solid lime;
+    border-radius: 6px;
+    background-color: #101010b3;
+}
+
+h2,
+h3,
+h4 {
+    margin-bottom: 0.5em;
+    color: white;
+    font-family: 'Exo 2', sans-serif;
+}
+
+
+/*--------------------*/
+
+@media (min-width: 576px) {
+
+    body {
+        padding: 5px !important;
+    }
+
+}
+
+/* #endregion */
+
+/* #region  MAIN */
+main {
+    background-color: var(--color-bg);
+    color: var(--color-font);
+}
+
+#links ul {
+    list-style: none;
+    padding-inline-start: 0px !important;
+    display: flex;
+}
+
+#links ul li {
+    margin-bottom: 6px;
+    padding-right: 9px;
+}
+
+#links img {
+    border-radius: 4px;
+}
+
+/* #endregion */
+
+/* #region  FOOTER */
+footer {
+    font-size: small;
+    color: var(--color-font);
+}
+
+/* #endregion */
+
+/* #region  EFFECTS */
+
+.border-gradient {
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 1px;
+}
+
+.border-gradient-purple {
+    border-image-source: linear-gradient(to right, #00ff1f, #ffc800);    
+
+}
+
+
+/* #endregion */

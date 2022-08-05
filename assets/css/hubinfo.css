@@ -1,0 +1,51 @@
+/* Global container */
+.github-repo {
+  background: #1c4a588f;
+  border: 2px solid lime;
+  padding: 9px;
+  font-family: 'Marmelad', sans-serif;
+  border-radius: 12px;
+}
+
+/* Link base style */
+.github-repo a {
+  text-decoration: none;
+  color: chartreuse;
+}
+
+.github-repo a:hover {
+  text-decoration: underline;
+}
+
+/* Repo stats */
+.repo-stats span,
+.repo-stats a, .repo-stats svg {
+  padding-right: 6px;
+  font-size: small;
+}
+
+.repo-name {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.repo-commit-message,
+.repo-commit-date {
+  color: DeepPink;
+  font-size: small;
+}
+
+.github-logo {
+  padding-right: 6px;
+  width: 6%;
+}
+
+.repo-label {
+  font-size: small;
+  color: #28a745;
+}
+
+.repo-lang{
+  font-size: small;
+}
